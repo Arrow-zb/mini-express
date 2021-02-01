@@ -15,7 +15,7 @@ const initStatic = (req, res, staticPath="public") => {
     // 不存在的捕获错误，往下执行即可
     console.log(filePath);
     const data = fs.readFileSync(filePath);
-    const mime = getMime(path.extname(pathname));
+    const mime = getMime(path.extname(pathname).slice(1));
     res.writeHead(200, {"Content-Type": `${mime}; charset=UTF-8`});
     res.end(data);
   } catch (error) {}
