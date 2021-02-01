@@ -1,5 +1,26 @@
 {
+  "name": "mini-express",
+  "version": "0.0.1",
+  "description": "小型的、持续维护的、学习为主的微型 node Web 服务，类 Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arrow-zb/mini-express.git"
+  },
+  "keywords": [],
+  "author": "paopao-arrow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Arrow-zb/mini-express/issues"
+  },
+  "homepage": "https://github.com/Arrow-zb/mini-express#readme",
   "dependencies": {
     "ejs": "^3.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
