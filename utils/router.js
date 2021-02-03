@@ -15,12 +15,23 @@ route.get('/login', (req, res) => {
       return;
     };
     resSend(res, data, 'text/html');
-  })
+  });
 });
 
 route.post('/doLogin', (req, res) => {
   console.log(req.body);
   resSend(res, req.body);
+});
+
+// 动态路由
+route.get('/article/:id', (req, res) => {
+  resSend(res, "article");
+});
+
+// 动态路由
+route.get('/article/:id/:cc', (req, res) => {
+  console.log(req.params);
+  resSend(res, "article" + req.params[":id"]);
 });
 
 const router = (req, res) => {

@@ -6,6 +6,9 @@
 initStatic(req, res);
 ```
 2. 路由注册
+- get 路由
+- post 路由
+- 动态路由
 ```js
 route.get('/login', (req, res) => {
   ejs.renderFile(path.join(__dirname, '../views/index.ejs'), {}, (err, data) => {
