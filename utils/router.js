@@ -6,7 +6,6 @@ const initStatic = require('./initStatic');
 const route = require('./initRoute');
 const resSend = require('./resSend');
 
-
 // 注册路由
 route.get('/login', (req, res) => {
   ejs.renderFile(path.join(__dirname, '../views/index.ejs'), {}, (err, data) => {
@@ -25,13 +24,13 @@ route.post('/doLogin', (req, res) => {
 
 // 动态路由
 route.get('/article/:id', (req, res) => {
-  resSend(res, "article");
+  resSend(res, "article"+ req.params[":id"]);
 });
 
 // 动态路由
 route.get('/article/:id/:cc', (req, res) => {
   console.log(req.params);
-  resSend(res, "article" + req.params[":id"]);
+  resSend(res, "article" + req.params[":id"] + req.params[":cc"]);
 });
 
 const router = (req, res) => {
